@@ -1,0 +1,51 @@
+class A:                #Parent class for class B1 and B2
+    def input(self):
+        self.a=20
+        self.b=40
+
+class B1(A):            #Child class of class A and Parent class for class B11 and B12
+    def sum(self):
+        self.c=self.a+self.b
+        print(self.c)
+
+class B2(A):            #Child class of class A and Parent class for class B21 and B22
+    def sub(self):
+        self.d=self.a-self.b
+        print(self.d)
+
+class B11(B1):            #Child class of class B1
+    def avg(self):
+        self.c1=self.c/2
+        print(self.c1)
+
+class B12(B1):            #Child class of class B1
+    def mul(self):
+        self.c2=self.c*2
+        print(self.c2)
+
+class B21(B2):             #Child class of class B2
+    def avg1(self):
+        self.d1=self.d/2
+        print(self.d1)
+
+class B22(B2):             #Child class of class B2
+    def mul1(self):
+        self.d2=self.d*2
+        print(self.d2)
+
+b1=B11()               #Creating object for class B11
+b1.input()
+b1.sum()
+b1.avg()
+b12=B12()               #Creating object for class B12
+b12.input()
+b12.sum()
+b12.mul()
+b2=B21()               #Creating object for class B21
+b2.input()
+b2.sub()
+b2.avg1()
+b22=B22()              #Creating object for class B22
+b22.input()
+b22.sub()
+b22.mul1()
