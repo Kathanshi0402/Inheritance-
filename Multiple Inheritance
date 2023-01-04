@@ -1,0 +1,21 @@
+class A:              #Parent class 1
+    def m1(self):
+        self.a = 10
+
+
+class B:              #Parent class 2
+    def m2(self):
+        self.b = 20
+
+
+class C(A,B):        #Child class 
+    def m3(self):
+        self.c=self.a + self.b
+        print(self.c)
+
+A1=A()     #Creating object of class A
+B1=B()     #Creating object of class B
+C1=C()     #creating object of class C
+C1.m1()
+C1.m2()
+C1.m3()
