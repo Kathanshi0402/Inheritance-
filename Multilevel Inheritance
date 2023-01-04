@@ -1,0 +1,21 @@
+class P:               #Parent class for class C
+    def m1(self):
+        self.a=10
+        self.b=20
+
+class C(P):           #Child class for class P ans Parent class for class D
+    def m2(self):
+        self.c=self.a+self.b
+        print(self.c)
+
+class D(C):           #Child class for class C
+    def m3(self):
+        self.d=self.c/2
+        print(self.d)
+
+p1=P()            #Creating object of class P
+c1=C()            #Creating object of class C
+d1=D()            #Creating object of class D
+d1.m1()
+d1.m2()
+d1.m3()
