@@ -1,0 +1,13 @@
+class p:                     #Parent class
+    def __init__(self):
+        self.a=10
+        self.b=20
+
+class c(p):                    #Child class
+    def __init__(self):
+        super().__init__()       #Constructor Overriding
+        self.c=self.a+self.b
+
+p1=p()             #Creating object of Parent class
+c1=c()             #Creating object of Child class
+print(c1.c)
